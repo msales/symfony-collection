@@ -429,6 +429,7 @@
             if (elements.length > settings.min && trueOrUndefined(settings.before_remove(collection, element))) {
                 element.remove();
             }
+            trueOrUndefined(settings.after_remove(collection, element));
 
             return elements;
         };
